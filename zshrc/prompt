@@ -1,0 +1,13 @@
+export ZSH_THEME_GIT_PROMPT_DIRTY="%{[33m%}%  ✗"
+export ZSH_THEME_GIT_PROMPT_CLEAN=""
+function parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
+}
+
+RABBIT=$'\U1F430'
+BEAR=$'\U1F43B'
+DOG=$'\U1F436'
+ERROR=$'\U1F363'
+export PS1="%{[0m%}
+%{[32m%}%n %{[32m%}%~%{[32m%}\$(parse_git_dirty)
+%(?|%{[36m%}${RABBIT} ${BEAR} ${DOG} |%{[31m%}${ERROR} ${ERROR} ${ERROR} )%{[35m%}\$(parse_git_branch) %{[0m%}"

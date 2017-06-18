@@ -1,0 +1,27 @@
+function start_redis () {
+    redis-server /usr/local/etc/redis.conf
+}
+
+function start_postgres () {
+    postgres -D /usr/local/var/postgres
+}
+
+function plrb () {
+    git pull --rebase origin `git rev-parse --abbrev-ref HEAD`
+}
+
+function refresh_zsh () {
+    source $HOME/.zshrc
+}
+
+function pullreq () {
+    hub compare
+}
+
+function update_master() {
+    g ft && g ch master && plrb && bundle install
+}
+
+function update_db() {
+    db:up && db:up RAILS_ENV=test && g ch db/schema.rb
+}

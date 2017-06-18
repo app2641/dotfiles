@@ -1,0 +1,16 @@
+alias alc="alc-cmd s"
+alias be="bundle exec"
+alias g="git"
+alias greset="g reset --hard"
+alias rk="rake"
+alias rs="rspec"
+alias sch="ps ax | ag "
+alias sp="spring"
+alias sprs="spring rspec -fd"
+alias sprk="spring rake"
+alias t='tmux'
+alias tls='tmux ls'
+alias ta='tmux attach-session -t '
+alias db:st="spring rake db:migrate:status"
+alias db:up="spring rake db:migrate"
+alias db:down="spring rake db:rollback"
