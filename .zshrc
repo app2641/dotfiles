@@ -100,6 +100,9 @@ export NVM_DIR="$HOME/.nvm"
 # yarn
 export PATH="$PATH:`yarn global bin`"
 
+# node
+export NODE_PATH=$(npm root -g)
+
 # ssh先のシェルで日本語を使えるようにする
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
