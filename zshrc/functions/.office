@@ -1,0 +1,9 @@
+if [ -d $HOME/Sites/forkwell ]; then
+  function update_master() {
+      g ft && g ch master && plrb && bundle install
+  }
+
+  function update_db() {
+      db:up && db:up RAILS_ENV=test && g ch db/schema.rb
+  }
+fi

@@ -14,3 +14,5 @@ function open_kintaiman () {
 function update_master() {
   g ft && g ch master && plrb
 }
+
+source $DOTFILES/zshrc/functions/.office
