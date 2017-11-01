@@ -48,7 +48,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # User configuration
-$HOME/.env
+if [ -e $HOME/.env ]; then
+    $HOME/.env
+fi
 
 # rbenv
 # eval "$(rbenv init - zsh)"
@@ -102,6 +104,7 @@ export PATH="$PATH:`yarn global bin`"
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-source $HOME/dotfiles/zshrc/prompt
-source $HOME/dotfiles/zshrc/alias
-source $HOME/dotfiles/zshrc/functions
+DOTFILES=$HOME/dotfiles
+source $DOTFILES/zshrc/.prompt
+source $DOTFILES/zshrc/.alias
+source $DOTFILES/zshrc/.functions

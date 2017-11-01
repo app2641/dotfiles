@@ -1,0 +1,25 @@
+alias alc="alc-cmd s"
+alias ls="exa"
+alias sch="ps ax | ag "
+
+# git
+alias g="hub"
+alias greset="g reset --hard"
+alias pullreq='g compare'
+
+# ruby & rails
+alias be="bundle exec"
+alias rk="be rake"
+alias rs="be rspec -fd"
+alias sp="spring"
+alias spstop="sp stop"
+alias sprs="spring rspec -fd"
+alias sprk="spring rake"
+alias db:st="sp rake db:migrate:status"
+alias db:up="sp rake db:migrate"
+alias db:down="sp rake db:rollback"
+
+# tmux
+alias t='tmux'
+alias tls='tmux ls'
+alias ta='tmux attach-session -t '
