@@ -1,0 +1,33 @@
+#! /bin/sh
+
+function view_log() {
+  DB_INSTANCE='rds-fw-db-production'
+  LOG_FILE=''
+  TOP_LIMIT=10
+
+  while getopts :i:l:t:h OPT
+  do
+    case $OPT in
+      i) DB_INSTANCE=$OPTARG
+        ;;
+      l) LOG_FILE=.$OPTARG
+        ;;
+      t) TOP_LIMIT=$OPTARG
+        ;;
+      h) usage_view_log
+        ;;
+      \?) usage_view_log
+        ;;
+    esac
+  done
+
+  aws rds download-db-log-file-portion \
+    --db-instance-identifier $DB_INSTANCE \
+    --log-file-name slowquery/mysql-slowquery.log$LOG_FILE | \
+    jq -rs '.[].LogFileData' | \
+    mysqldumpslow - -t $TOP_LIMIT
+}
+
+fucntion usage_view_log() {
+  echo "Usage: $0 [-i db-instance] [-l slow-logrotate-num] [-t top_limit]" 1>&2
+}

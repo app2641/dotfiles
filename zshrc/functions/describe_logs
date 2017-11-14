@@ -1,0 +1,13 @@
+#! /bin/sh
+
+function describe_logs() {
+  if [ $# -ge 1 ]; then
+    DB_INSTANCE=$1
+  else
+    DB_INSTANCE='rds-fw-db-production'
+  fi
+
+  aws rds describe-db-log-files \
+  --db-instance-identifier $DB_INSTANCE | \
+  jq -r '.DescribeDBLogFiles[].LogFileName'
+}
