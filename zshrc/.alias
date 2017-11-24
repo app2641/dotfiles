@@ -25,6 +25,7 @@ alias sprk="spring rake"
 alias db:st="sp rake db:migrate:status"
 alias db:up="sp rake db:migrate"
 alias db:down="sp rake db:rollback"
+alias db:reup="db:down && db:up"
 
 # tmux
 alias t='tmux'
