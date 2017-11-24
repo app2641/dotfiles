@@ -9,6 +9,16 @@ if [ -d $HOME/Sites/forkwell ]; then
       db:up && db:up RAILS_ENV=test && g ch db/schema.rb
   }
 
+  function redo_db() {
+    DB_ENV='development'
+    if [ $1 = 'test' ]; then
+        DB_ENV='test'
+    fi
+
+    sprk db:migrate:redo RAILS_ENV=$DB_ENV && \
+    g ch db/schema.rb
+  }
+
   source $DOTFILES/zshrc/functions/describe_logs
   source $DOTFILES/zshrc/functions/view_log
 fi
