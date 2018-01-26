@@ -9,6 +9,7 @@ alias pullreq='g compare'
 
 # ruby & rails
 alias be="bundle exec"
+alias cap="bundle exec cap"
 alias rk="be rake"
 alias rs="be rspec -fd"
 alias sp="spring"
