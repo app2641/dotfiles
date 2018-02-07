@@ -1,4 +1,5 @@
 alias alc="alc-cmd s"
+alias c="clear"
 alias ls="exa"
 alias sch="ps ax | ag "
 
