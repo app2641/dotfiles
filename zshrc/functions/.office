@@ -1,6 +1,8 @@
 #! /bin/sh
 
 if [ -d $HOME/Sites/forkwell ]; then
+  FW="$HOME/Sites/forkwell"
+
   function update_master() {
       g ft && g ch master && plrb && bundle install
   }
@@ -17,6 +19,10 @@ if [ -d $HOME/Sites/forkwell ]; then
 
     sprk db:migrate:redo RAILS_ENV=$DB_ENV && \
     g ch db/schema.rb
+  }
+
+  function mocha_test() {
+    NODE_ENV=test $FW/node_modules/.bin/mocha --timeout 0 -R dot $1
   }
 
   source $DOTFILES/zshrc/functions/describe_logs
