@@ -8,6 +8,11 @@ alias g="hub"
 alias greset="g reset --hard"
 alias pullreq='g compare'
 
+# ghq
+alias hb='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias gb='hub browse'
+alias gcd='cd $(ghq root)/$(ghq list | peco)'
+
 # ruby & rails
 alias be="bundle exec"
 alias cap="bundle exec cap"
