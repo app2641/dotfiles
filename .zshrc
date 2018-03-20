@@ -109,6 +109,9 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 # pip
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 
+# thefuck
+eval "$(thefuck --alias)"
+
 # ssh先のシェルで日本語を使えるようにする
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
