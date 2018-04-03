@@ -1,8 +1,8 @@
 #! /bin/sh
 
-if [ -d $HOME/Sites/forkwell ]; then
-  FW="$HOME/Sites/forkwell"
+FW="$HOME/.ghq/forkwell"
 
+if [ -d $FW ]; then
   function update_master() {
       g ft && g ch master && plrb && bundle install
   }
