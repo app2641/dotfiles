@@ -16,6 +16,8 @@ alias gcd='cd $(ghq root)/$(ghq list | peco)'
 # ruby & rails
 alias be="bundle exec"
 alias cap="bundle exec cap"
+alias fwmysql="mysql -u root -p -h '127.0.0.1'"
+alias fwmysqldump="mysqldump -u root -p -h '127.0.0.1'"
 alias rk="be rake"
 alias rs="be rspec -fd"
 alias sp="spring"
