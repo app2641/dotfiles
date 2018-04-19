@@ -4,6 +4,7 @@
   ch = checkout
   ci = commit
   cia = commit --amend
+  ciskip = !git add . && git commit -m '[ci skip] wip'
   clean-br = !git branch -d `git branch --merged master | grep -v master`
   cp = cherry-pick
   df = diff HEAD
