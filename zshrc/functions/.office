@@ -3,8 +3,8 @@
 FW="$HOME/.ghq/forkwell"
 
 if [ -d $FW ]; then
-  function update_master() {
-      g ft && g ch master && plrb && bundle install
+  function update_fw() {
+      g ft && g ch master && plrb && bundle install && yarn install
   }
 
   function update_db() {
