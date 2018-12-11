@@ -10,3 +10,7 @@ function open_kintaiman () {
   ID=`cat ~/Documents/GitProjects/kintaiman_v2/gapps.config.json | jq -r .fileId`
   open "https://script.google.com/a/grooves.co.jp/d/${ID}/edit" -a 'Google Chrome'
 }
+
+function update_master() {
+  g ft && g ch master && plrb
+}
