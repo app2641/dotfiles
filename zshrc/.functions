@@ -11,6 +11,14 @@ function open_kintaiman () {
   open "https://script.google.com/a/grooves.co.jp/d/${ID}/edit" -a 'Google Chrome'
 }
 
+function figrm () {
+  docker-compose run --rm app "$@"
+}
+
+function figbe() {
+  figrm bundle exec "$@"
+}
+
 function update_master() {
   g ft && g ch master && plrb
 }
