@@ -22,3 +22,37 @@ set autoread
 
 " 編集中でも他のファイルを開けるようにする
 set hidden
+
+" バックスペースでなんでも消せるようになる
+set backspace=indent,eol,start
+
+" ファイルブラウザ開始時のディレクトリ
+" buffer: バッファで開いているディレクトリ
+set browsedir=buffer
+
+" コマンドをステータス行に表示する
+set showcmd
+
+" 現在のモードを表示する
+set showmode
+
+" モードライン無効
+set modelines=0
+
+" vimを使ってくれてありがとう
+set notitle
+
+" ターミナルでマウスを使用できるようにする
+set mouse=a
+
+"ヤンクした文字をシステムのクリップボードに入れる
+set clipboard=unnamed
+
+" 挿入モードでCtrl+pを押してクリップボードの内容を貼り付けられるようにする
+imap <C-p>  <ESC>"*pa
+
+" /Rvでinit.vimの反映
+command! Rv source $MYVIMRC
+
+" ファイルタイプ判定をon
+filetype plugin on
