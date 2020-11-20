@@ -26,4 +26,4 @@ set inccommand=split
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
 
 " 選択した文字列を検索
-vnoremap <silent> // y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>
+" vnoremap <silent> // y/<C-R>=escape(@", '\\/.*$^~[]')<CR><CR>

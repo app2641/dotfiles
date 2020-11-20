@@ -18,15 +18,15 @@ alias be="bundle exec"
 alias cap="bundle exec cap"
 alias rk="be rake"
 alias rs="be rspec -fd"
-alias sp="spring"
-alias spstop="sp stop"
-alias sprs="spring rspec -fd"
-alias sprk="spring rake"
-alias db:st="sp rake db:migrate:status"
-alias db:up="sp rake db:migrate"
-alias db:down="sp rake db:rollback"
+alias db:st="be rake db:migrate:status"
+alias db:up="be rake db:migrate"
+alias db:down="be rake db:rollback"
+alias db:redo="be rake db:migrate:redo"
 
 # tmux
 alias t='tmux'
 alias tls='tmux ls'
 alias ta='tmux attach-session -t '
+
+# fzf
+alias f='fzf'

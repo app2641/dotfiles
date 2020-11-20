@@ -1,0 +1,14 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+# <Leader>c<space>でコメントをトグル
+repo = 'scrooloose/nerdcommenter'
+
+[[plugins]]
+# インデントに色を付ける
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+# 履歴をツリー表示
+repo = 'sjl/gundo.vim'

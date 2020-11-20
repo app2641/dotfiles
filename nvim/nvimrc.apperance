@@ -16,3 +16,13 @@ set listchars=tab:>.,trail:_,extends:>,precedes:<
 
 " 指定の列を強調させる
 set colorcolumn=80
+
+" 全角スペースの表示
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+match ZenkakuSpace /　/
+
+" カーソル行をハイライト
+set cursorline
+
+" カーソルを点滅させない
+set guicursor=a:blinkon0
