@@ -9,3 +9,7 @@ function rzsh () {
 function update_master() {
   g ft && g ch master && plrb
 }
+
+function update_bundler() {
+  update_mater && bundle install
+}
