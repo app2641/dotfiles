@@ -6,10 +6,14 @@ function rzsh () {
     source $HOME/.zshrc
 }
 
-function update_master() {
-  g ft && g ch master && plrb
+function default_branch() {
+  git remote show origin | grep 'HEAD branch' | awk '{print $NF}'
 }
 
-function update_bundler() {
-  update_mater && bundle install
+function update_master() {
+  g ft && g ch `default_branch` && plrb
+}
+
+function update_bundle() {
+  g ft && g ch `default_branch` && plrb && bundle install
 }

@@ -12,7 +12,7 @@ alias gch='git checkout $(git br | fzf)'
 # ghq
 alias hb='hub browse $(ghq list | fxf | cut -d "/" -f 2,3)'
 alias gb='hub browse'
-alias gcd='cd $(ghq root)/$(ghq list | fxf)'
+alias gcd='cd $(ghq root)/$(ghq list | fzf)'
 
 # ruby & rails
 alias be="bundle exec"
@@ -37,3 +37,6 @@ alias dc='docker-compose'
 
 # bat
 alias cat='bat'
+
+# team_stringth
+alias ts='~/Sites/tools/bin/team_strength.rb'
